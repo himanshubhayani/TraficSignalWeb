@@ -1,0 +1,5 @@
+<div class="spinner">
+  <mat-progress-spinner *ngIf="isLoading" [mode]="mode" [value]="value" [diameter]="diameter" class="center-spinner">
+  </mat-progress-spinner>
+</div>
+<div *ngIf="blocking && isLoading" class="overlay"></div>

@@ -1,0 +1,31 @@
+<div class="container mt-135 admin-module">
+<div class="">
+<div class="margin-inner-tab mt-20">
+    <label>
+      <h3 class="mb-1">Direction</h3>
+    </label>
+    <mat-form-field appearance="outline">
+      <mat-label>Direction</mat-label>
+      <mat-select  [(ngModel)]="newConfiguration.Direction" >
+        <mat-option [value]="1">Clockwise</mat-option>
+        <mat-option [value]="2">Anti Clock wise</mat-option>
+        <mat-option [value]="3">Up & Down</mat-option>
+        <mat-option [value]="4">Left & Right</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="margin-inner-tab mt-20">
+    <label>
+      <h3 class="mb-1">Interval</h3>
+    </label>
+    <mat-form-field class="example-full-width">
+      <mat-label>select in second</mat-label>
+      <input type="number" matInput name="hindiTitle" [(ngModel)]="newConfiguration.TimeInterval">
+    </mat-form-field>
+  </div>
+  <div class="mb-20 ">
+    <button mat-raised-button color="primary" (click)="save()">Submit
+    </button>
+  </div>
+</div>
+</div>

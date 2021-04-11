@@ -1,0 +1,40 @@
+<!-- Spinner start -->
+<app-loader [isLoading]="isLoader" [diameter]="60"></app-loader>
+<!-- spinner end -->
+<div class="login-form d-flex h-100">
+  <div class="card mb-0">
+    <div class="card-body">
+      <div class="mb-15">
+        <h2 class="mb-0 mt-15 text-center">Login to Global Configuration</h2>
+      </div>
+      <div class="mt-30">
+        <form #f="ngForm" class="form-signin ">
+          <div class="mb-15 ">
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Email" name="email" type="email" [(ngModel)]="loginModal.Email"
+                #email="ngModel" pattern="^([A-Za-z0-9_\-\.]+)@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*(\.[A-Za-z]{2,3})$"
+                required />
+              <mat-error *ngIf="email.errors?.pattern">
+                Email is invalid.
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="mb-15">
+            <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input matInput placeholder="Password" name="password" autocomplete="new-password"
+                [(ngModel)]="loginModal.Password" #clientName="ngModel" required type="password" />
+            </mat-form-field>
+          </div>
+          <div class="mb-15 ">
+            <button class="w-100" mat-raised-button color="primary" (click)="submit()" [disabled]="f.invalid">
+              <mat-icon class="mr-5">exit_to_app</mat-icon>Login
+            </button>
+            <h5 class="mb-0 mt-15 font-normal font-16">{{error}}</h5>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

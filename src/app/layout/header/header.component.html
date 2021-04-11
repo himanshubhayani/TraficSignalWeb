@@ -1,0 +1,16 @@
+<!-- Toolbar -->
+<div class="toolbar ptb-5" role="banner">
+  <div class="container d-flex align-items-center">
+    <a [routerLink]="['/analyzer']" class="line-height-0"><img width="50" class="logo" alt="Angular Logo"
+        src="./assets/trafficLogo.png" /></a>
+
+    <div class="d-flex justify-content-end w-100 textbox-padding">
+      <button mat-raised-button color="primary" (click)="Analyzer()">Analyzer
+      </button>
+      <button mat-raised-button color="primary" (click)="Configuration()">Global Configuration
+      </button>
+      <button mat-raised-button color="primary" (click)="LogOut()">LogOut
+      </button>
+    </div>
+  </div>
+</div>

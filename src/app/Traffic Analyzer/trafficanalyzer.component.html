@@ -1,0 +1,59 @@
+<div class="container mt-135 admin-module">
+    <table>
+        <tr>
+            <td><b>Time</b></td>
+            <td>{{time}}</td>
+        </tr>
+        <tr>
+            <td><b>Current Open</b></td>
+            <td>{{CurrentOpen}}</td>
+        </tr>
+        <tr>
+            <td><b>Next Open</b></td>
+            <td>{{NextOpen}}</td>
+        </tr>
+        <tr>
+            <td><b>Direction</b></td>
+            <td>{{Direction}}</td>
+        </tr>
+    </table>
+</div>
+<div class="container mt-135 admin-module">
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><button (click)="ImergencyAA()" mat-raised-button [ngClass]="AA ? 'green-signal' : 'red-signal'">AA</button></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><button mat-raised-button [ngClass]="A ? 'green-signal' : 'red-signal'">A</button></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr style=" margin:5px ">
+            <td><button (click)="ImergencyAD()" mat-raised-button [ngClass]="AD ? 'green-signal' : 'red-signal'">AD</button></td>
+            <td><button mat-raised-button [ngClass]="D ? 'green-signal' : 'red-signal'">D</button></td>
+            <td></td>
+            <td><button mat-raised-button [ngClass]="B ? 'green-signal' : 'red-signal'">B</button></td>
+            <td><button (click)="ImergencyAB()" mat-raised-button [ngClass]="AB ? 'green-signal' : 'red-signal'">AB</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><button mat-raised-button [ngClass]="C ? 'green-signal' : 'red-signal'">C</button></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><button (click)="ImergencyAC()" mat-raised-button [ngClass]="AC ? 'green-signal' : 'red-signal'">AC</button></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</div>

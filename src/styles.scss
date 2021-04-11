@@ -1,0 +1,162 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: #333;}
+a, a:hover {
+    text-decoration: none !important;
+}
+.mat-card-header-text {
+    margin: 0 0 !important;
+}
+.position-relative {
+    position: relative;
+}
+.d-flex {
+    display: flex;
+}
+.align-items-center {
+    align-items: center;
+}
+.justify-content-end {
+    justify-content: flex-end;
+}
+.btn-margin {
+    margin: 3px 6px 3px 0px !important;
+}
+.text-center {
+    text-align: center;
+}
+.mb-1 {
+    margin-bottom: 1px !important;
+}
+.mb-5 {
+    margin-bottom: 5px !important;
+}
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+.mt-20 {
+    margin-top: 20px !important;
+}
+.mr-5 {
+    margin-right: 5px;
+}
+.mr-10 {
+    margin-right: 10px;
+}
+.ptb-5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.mt-135 {
+    margin-top: 135px !important;
+}
+.ml-842{
+    margin-left: 842px;
+}
+.line-height-0 {
+    line-height: 0;
+}
+.columnLeft .mat-card-header-text {
+    width: 85%;
+}
+.container {
+    width: 1170px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.textbox-padding  .mat-form-field-wrapper {
+    padding-bottom: 0;
+}
+.w-100 {
+   width: 100%;
+}
+.h-100 {
+    height: 100%;
+}
+.pstick{
+    position: sticky;
+}
+.customfont {
+    width: 60px;
+    border: none;
+    padding: 3px 0;
+    background: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0,0,0,.42);
+}
+:focus {
+    outline: none;
+}
+.mat-paginator-container {
+    padding: 0 0 !important;
+}
+.mat-stroked-button:not([disabled]) {
+    border-color: #3f51b5;
+}
+.font-18 {
+    font-size: 18px;
+}
+.text-gray {
+    color: #777;
+}
+.mat-card-subtitle, .mat-card-content {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+.example-form.textbox-padding .mat-form-field {
+    width: 70%;
+}
+.admin-module .mat-form-field, .admin-module .mat-form-field-infix {
+    width: 100%;
+}
+.mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element, .mat-checkbox:active:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element {
+    background: #4763a5;
+}
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: #4763a5;
+}
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+    background-color: #4763a5;
+}
+.align-items-center {
+    align-items: center;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+
+pre {
+    white-space: pre-wrap;
+   }
+@media (max-width: 1200px) {
+    .container {
+        width: 80%;
+    }
+}
+@media (max-width: 992px) {
+    .container {
+        width: calc(100% - 30px);
+    }
+    .example-form.textbox-padding .mat-form-field {
+        width: 60%;
+    }
+}
+@media (max-width: 767px) {
+    .mat-paginator-range-label {
+        margin: 0 1px 0 0px !important;
+    }
+    .example-form.textbox-padding .mat-form-field {
+        width: 100%;
+    }
+}
+@media (max-width: 450px) {
+    .logo {
+        width: 130px;
+    }
+    .toolbar  .mat-form-field {
+        width: 75%;
+    }
+}

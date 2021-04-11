@@ -1,0 +1,10 @@
+.toolbar {
+  margin: 0px;
+  background: white;
+  box-shadow: 0 0 20px #ccc;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+}
+  

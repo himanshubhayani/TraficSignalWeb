@@ -1,0 +1,5 @@
+<div class="col s12 bg-white paginationplaceholder">
+  <mat-paginator (page)="getNext($event)" [length]="childMessage" [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions" showFirstLastButtons>
+  </mat-paginator>
+</div>

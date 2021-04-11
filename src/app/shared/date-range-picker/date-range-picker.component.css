@@ -1,0 +1,10 @@
+.close-icon {
+    position: absolute;
+    top: 16px;
+    right: 30px;
+    color: rgba(0, 0, 0, .54);
+    cursor: pointer;
+}
+.material-icons {
+    font-size: 18px !important;
+}

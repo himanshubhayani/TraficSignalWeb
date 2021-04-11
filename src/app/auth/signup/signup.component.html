@@ -1,0 +1,127 @@
+<!-- Spinner start -->
+<app-loader [isLoading]="isLoader" [diameter]="60"></app-loader>
+<!-- spinner end -->
+<div class="login-form d-flex h-100">
+  <div class="card mb-0">
+    <div class="card-body">
+      <div class="mb-15">
+        <h2 class="mb-0 mt-15 text-center">User Registration</h2>
+      </div>
+      <div class="mt-30">
+        <form #f="ngForm" class="form-signin ">
+          <div class="mb-15 ">
+            <mat-form-field appearance="outline">
+              <mat-label>FirstName</mat-label>
+              <input matInput placeholder="FirstName" name="firstname" type="text" [(ngModel)]="signupModal.FirstName"
+                required />
+            </mat-form-field>
+          </div>
+          <div class="mb-15 ">
+            <mat-form-field appearance="outline">
+              <mat-label>LastName</mat-label>
+              <input matInput placeholder="LastName" name="lastname" type="text" [(ngModel)]="signupModal.LastName"
+                required />
+            </mat-form-field>
+          </div>
+          <div class="mb-15 ">
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Email" name="email" type="email" [(ngModel)]="signupModal.Email"
+                #email="ngModel" pattern="^([A-Za-z0-9_\-\.]+)@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*(\.[A-Za-z]{2,3})$"
+                required />
+              <mat-error *ngIf="email.errors?.pattern">
+                Email is invalid.
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="mb-15">
+            <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input matInput placeholder="Password" name="password" autocomplete="new-password"
+                [(ngModel)]="signupModal.Password" required type="password" />
+            </mat-form-field>
+          </div>
+          <div class="mb-15 ">
+            <button class="w-100" mat-raised-button color="primary" (click)="create()" [disabled]="f.invalid">
+              <mat-icon class="mr-5">exit_to_app</mat-icon>Signup
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<mat-card class="main-card-radius-0">
+  <div class="h-465">
+    <!-- Spinner start -->
+    <app-loader [isLoading]="isLoader" [diameter]="60"></app-loader>
+    <!-- <app-loader-message [isLoading]="true" [message]="'This action may take time'" [height]="'100px'" [width]="'184px'"  [diameter]="60"></app-loader-message> -->
+    <!-- spinner end -->
+    <div class="border-show">
+      <mat-table [dataSource]="userList" class="mat-elevation-z8">
+        <ng-container matColumnDef="FirstName">
+          <mat-header-cell *matHeaderCellDef>
+            <mat-form-field class="mt-10 wd-100" appearance="legacy">
+              <mat-label> FirstName</mat-label>
+              <input matInput type="text" name="firstname" placeholder="FirstName" disabled />
+            </mat-form-field>
+          </mat-header-cell>
+          <mat-cell *matCellDef="let element" data-label="FirstName">{{ element.FirstName }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="LastName">
+          <mat-header-cell *matHeaderCellDef>
+            <mat-form-field class="mt-10 wd-100" appearance="legacy">
+              <mat-label> LastName</mat-label>
+              <input matInput type="text" name="lastname" placeholder="LastName" disabled />
+            </mat-form-field>
+          </mat-header-cell>
+          <mat-cell *matCellDef="let element" data-label="LastName">{{ element.LastName }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Email">
+          <mat-header-cell *matHeaderCellDef>
+            <mat-form-field class="mt-10 wd-100" appearance="legacy">
+              <mat-label> Email</mat-label>
+              <input matInput type="text" name="email" placeholder="Email" disabled />
+            </mat-form-field>
+          </mat-header-cell>
+          <mat-cell *matCellDef="let element" data-label="Email">{{ element.Email }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Password">
+          <mat-header-cell *matHeaderCellDef>
+            <mat-form-field class="mt-10 wd-100" appearance="legacy">
+              <mat-label> Password</mat-label>
+              <input matInput type="text" name="password" placeholder="Password" disabled />
+            </mat-form-field>
+          </mat-header-cell>
+          <mat-cell *matCellDef="let element" data-label="Password">{{ element.Password }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Action">
+          <mat-header-cell *matHeaderCellDef fxFlex="100px">
+            <mat-form-field class="mt-10 wd-100" appearance="legacy">
+              <mat-label> Action</mat-label>
+              <input matInput type="text" name="action" placeholder="Action" disabled />
+            </mat-form-field>
+          </mat-header-cell>
+          <mat-cell *matCellDef="let element" data-label="Action">
+            <a matTooltip="Edit" matTooltipPosition="above" (click)="edit(element)">
+              <mat-icon>edit</mat-icon>
+            </a>
+            <a matTooltip="Delete" matTooltipPosition="above" (click)="detete(element)">
+              <mat-icon>delete_outline</mat-icon>
+            </a>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      </mat-table>
+      <div class="no-record" *ngIf="userList.length == 0 && !isLoader">No record found</div>
+    </div>
+  </div>
+</mat-card>

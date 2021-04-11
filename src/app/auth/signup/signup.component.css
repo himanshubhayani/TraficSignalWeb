@@ -1,0 +1,17 @@
+
+.login-form .card {
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .1875rem;
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+.login-form  .mat-form-field {
+  width: 100%;
+}
+
+@media (max-width: 450px) {
+  .login-form .card {
+    width: 75%;
+  }
+}
